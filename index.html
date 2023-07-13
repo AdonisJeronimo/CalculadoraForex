@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="descrição">
+    <title>Document</title>
+    <!-- FAVICON -->
+    <!-- SWIPER CSS -->
+    <!-- FONT AWESOME -->
+    <!-- GOOGLE FONTS -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <h1>Calculadora forex</h1>
+
+            <span>Valor em conta</span>
+            <input type="text" placeholder="Ex: $20000" id="balance">
+
+            <span>Risco diário</span>
+            <select id="risk">
+                <option value="0.5">0,5%</option>
+                <option value="1">1%</option>
+                <option value="1.5">1,5%</option>
+                <option value="2">2%</option>
+                <option value="2.5">2,5%</option>
+                <option value="3">3%</option>
+                <option value="3.5">3,5%</option>
+                <option value="4">4%</option>
+                <option value="4.5">4,5%</option>
+                <option value="5">5%</option>
+            </select>
+
+            <span>Pontuação de Stop-loss</span>
+            <input type="text" placeholder="300pt" id="stop-loss-point">
+
+            <input type="submit" value="Calcular" id="calculate">
+
+            <div id="stop-loss-result"></div>
+            <div id="lot-size-result"></div>
+
+        </div>
+    </main>
+    <!-- FOOTER -->
+    
+    <script src="src/js/script.js"></script>
+</body>
+</html>
