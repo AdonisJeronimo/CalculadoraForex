@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="descrição">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="descrição" />
     <title>Document</title>
     <!-- FAVICON -->
     <!-- SWIPER CSS -->
     <!-- FONT AWESOME -->
     <!-- GOOGLE FONTS -->
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="src/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
     <!-- HEADER -->
+
+    <nav class="sidebar ">
+      <div class="sidebar-expand dark-layer">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <ul>
+        <li class="menu-item">
+          <a href="https://br.tradingview.com/" target="_blank">
+            <img
+              src="https://static.tradingview.com/static/images/logo-preview.png"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="https://www.forexfactory.com/" target="_blank">
+            <img src="https://media.publit.io/file/PipMavensPages/Forex-Factory-logo.jpg" alt="">
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="https://market24hclock.com/" target="_blank">
+            <img src="https://play-lh.googleusercontent.com/LFd5Eg-yO9Gyz3fkhnp_Y_wP2kWpwvLlaqCqufPSToVebG6L85rNEm03rK4LUPeN4iU" alt="">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <!-- MAIN -->
     <main>
-        <div class="container">
-            <h1>Calculadora forex</h1>
+      <div class="container">
+        <h1>Calculadora forex</h1>
 
-            <span>Valor em conta</span>
-            <input type="text" placeholder="Ex: $20000" id="balance">
+        <span>Valor em conta</span>
+        <input type="text" placeholder="Ex: $20000" id="balance" />
 
-            <span>Risco diário</span>
-            <select id="risk">
-                <option value="0.5">0,5%</option>
-                <option value="1">1%</option>
-                <option value="1.5">1,5%</option>
-                <option value="2">2%</option>
-                <option value="2.5">2,5%</option>
-                <option value="3">3%</option>
-                <option value="3.5">3,5%</option>
-                <option value="4">4%</option>
-                <option value="4.5">4,5%</option>
-                <option value="5">5%</option>
-            </select>
+        <span>Risco diário</span>
+        <select id="risk">
+          <option value="0.5">0,5%</option>
+          <option value="1">1%</option>
+          <option value="1.5">1,5%</option>
+          <option value="2">2%</option>
+          <option value="2.5">2,5%</option>
+          <option value="3">3%</option>
+          <option value="3.5">3,5%</option>
+          <option value="4">4%</option>
+          <option value="4.5">4,5%</option>
+          <option value="5">5%</option>
+        </select>
 
-            <span>Pontuação de Stop-loss</span>
-            <input type="text" placeholder="300pt" id="stop-loss-point">
+        <span>Pontuação de Stop-loss</span>
+        <input type="text" placeholder="300pt" id="stop-loss-point" />
 
-            <input type="submit" value="Calcular" id="calculate">
+        <input type="submit" value="Calcular" id="calculate" />
 
-            <div id="stop-loss-result"></div>
-            <div id="lot-size-result"></div>
-
-        </div>
+        <div id="stop-loss-result"></div>
+        <div id="lot-size-result"></div>
+      </div>
     </main>
     <!-- FOOTER -->
-    
+
     <script src="src/js/script.js"></script>
-</body>
+  </body>
 </html>
