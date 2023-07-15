@@ -21,37 +21,40 @@
   <body>
     <!-- HEADER -->
 
-    <nav class="sidebar ">
-      <div class="sidebar-expand dark-layer">
-        <i class="bi bi-list"></i>
-      </div>
-
-      <ul>
-        <li class="menu-item">
-          <a href="https://br.tradingview.com/" target="_blank">
-            <img
-              src="https://static.tradingview.com/static/images/logo-preview.png"
-              alt=""
-            />
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="https://www.forexfactory.com/" target="_blank">
-            <img src="https://media.publit.io/file/PipMavensPages/Forex-Factory-logo.jpg" alt="">
-          </a>
-        </li>
-
-        <li class="menu-item">
-          <a href="https://market24hclock.com/" target="_blank">
-            <img src="https://play-lh.googleusercontent.com/LFd5Eg-yO9Gyz3fkhnp_Y_wP2kWpwvLlaqCqufPSToVebG6L85rNEm03rK4LUPeN4iU" alt="">
-          </a>
-        </li>
-      </ul>
-    </nav>
+    
 
     <!-- MAIN -->
-    <main>
-      <div class="container">
+    <main class="main">
+
+      <div class="left-sidebar" id="sidebar">
+        
+       <a href="#" class="menu" id="menuBtn">
+        <!-- <img src="src/images/logo.png" alt=""> -->
+        Trading
+        <i class="bi bi-list"></i>
+       </a>
+
+       <div class="content-sidebar">
+        
+        <a href="https://br.tradingview.com/" target="_blank" class="menu-item hidden">
+          <img src="https://static.tradingview.com/static/images/logo-preview.png" alt="TradingView">
+        </a>
+
+        <a href="https://www.forexfactory.com/" target="_blank" class="menu-item hidden">
+          <img src="https://media.publit.io/file/PipMavensPages/Forex-Factory-logo.jpg" alt="ForexFactory">
+        </a>
+        
+        <a href="https://market24hclock.com/" target="_blank" class="menu-item hidden">
+          <img src="https://play-lh.googleusercontent.com/eWm1U1o2dGxn5nB7HomCLkZzO7xJT4zkz5GsxmzWy5QINiBpNyJE-UCZej76VvHATw" alt="Market 24h Clock">
+        </a>
+      
+       </div>
+      </div>
+
+
+
+
+      <section class="container">
         <h1>Calculadora forex</h1>
 
         <span>Valor em conta</span>
@@ -78,7 +81,9 @@
 
         <div id="stop-loss-result"></div>
         <div id="lot-size-result"></div>
-      </div>
+      </section>
+
+      <div class="overlay hidden"  id="overlay"></div>
     </main>
     <!-- FOOTER -->
 

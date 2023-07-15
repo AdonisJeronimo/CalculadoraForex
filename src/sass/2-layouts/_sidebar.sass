@@ -1,70 +1,71 @@
-.sidebar
+.left-sidebar
     position: fixed
-    width: 300px
-    height: 100%
-    background-color: #0D5700
-    padding: 40px 0 40px 1%
-    top: 0
-    left: 0
-    transition: .3s ease
-    overflow: hidden
-    // clip-path: polygon(0 0, 15% 0, 15% 100%, 0 100%)
+    min-width: 230px
+    max-width: 230px
+    background-color: #003106
+    margin-left: -170px
+    transition: all .3s
+    z-index: 999
+    filter: drop-shadow(0 0px 10px #001a03) drop-shadow(0 10px 1px #001a03)
 
-    &:hover
-        width: 300px
-        box-shadow: 5px 0 0 red
-        
+    #sidebar
+        position: fixed
+        top: 0
 
-    &-expand
-        width: 100%
-        padding-left: 10px
+    .menu
+        font-size: 1.5rem
+        font-weight: bold
+        display: flex
+        justify-content: space-between
+        align-content: center
+        text-decoration: none
+        text-align: end
+        color: #fff
+        background-color: #001a03
+        padding: 1rem
+        // border-bottom: 1px solid #e0e0e0
 
-        i
-            color: #fff
-            font-size: 24px
-            cursor: pointer
-
-    // .dark-layer::after
-    //     content: ""
-    //     position: absolute
-    //     width: 100%
-    //     height: 100vh
-    //     top: 0
-    //     left: 0
-    //     background: rgba(0, 0, 0, 0.3)
-
-    ul
-        height: 100%
+    .content-sidebar
         display: flex
         flex-direction: column
-        justify-content: space-around
-        list-style-type: none
+        justify-content: space-evenly
+        align-items: center
+        height: 90vh
+        overflow-y: auto
 
-        li
-            display: flex
-            flex-direction: column
-
-        .menu-item a
-            display: flex
-            align-items: center
-            flex-direction: column
-            justify-content: space-between
-            // margin: 1rem
-            color: #fff
-            text-decoration: none
-            font-size: 20px
-            padding: 20px 4%
-            height: 100%
-            transition: .3s ease
-
-            // z-index: 99
-
-            &:hover
-                transform: scale(105%)   
-
-            img
-                height: 130px
-                border-radius: 15px
-                
+        img
+            max-width: 200px
+            height: 100px
+            border-radius: 20px
+            transition: transform 0.3s, box-shadow 0.3s
             
-                    
+            &:hover
+                cursor: pointer
+                transform: scale(1.05)
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+    
+    .menu-item
+        text-align: center
+        width: 90%
+        padding-bottom: 1rem
+        border-bottom: 3px solid #0c3f016e
+
+
+
+.active
+    margin-left: 0
+
+.overlay
+    width: 100vw
+    height: 100vh
+    top: 0
+    left: 0
+    position: absolute
+    background-color: rgba(0, 0, 0, .8)
+    z-index: 2
+
+.hidden
+    display: none
+
+
+

@@ -1,9 +1,27 @@
-let calculate = document.getElementById('calculate')
-let menuBtn = document.querySelector('#sidebar-expand')
+let calculate = document.getElementById('calculate');
+let sidebar = document.getElementById('sidebar');
+let menuBtn = document.getElementById('menuBtn');
+let overlay = document.getElementById('overlay');
+let menuItems = document.querySelectorAll('.menu-item');
 
 menuBtn.onclick = () =>{
-    menuBtn.classList.toggle('bi-x-lg')
+    sidebar.classList.toggle('active')
+    overlay.classList.toggle('hidden')
+
+    menuItems.forEach(item => {
+          item.classList.toggle('hidden');
+        });
 }
+
+
+overlay.onclick = () =>{
+    sidebar.classList.toggle('active')
+    overlay.classList.toggle('hidden')
+    menuItems.forEach(item => {
+        item.classList.toggle('hidden');
+      });
+}
+
 
 
 calculate.addEventListener('click', ()=>{
