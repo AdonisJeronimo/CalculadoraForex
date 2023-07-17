@@ -4,6 +4,8 @@ let menuBtn = document.getElementById('menuBtn');
 let overlay = document.getElementById('overlay');
 let menuItems = document.querySelectorAll('.menu-item');
 
+// $('.money2').mask("#.##0,00", {reverse: true});
+
 menuBtn.onclick = () =>{
     sidebar.classList.toggle('active')
     overlay.classList.toggle('hidden')
@@ -22,9 +24,8 @@ overlay.onclick = () =>{
       });
 }
 
-
-
 calculate.addEventListener('click', ()=>{
+
     let balance = document.getElementById('balance')
     let risk = document.getElementById('risk')
     let stopLossPoint = document.getElementById('stop-loss-point')
@@ -35,7 +36,6 @@ calculate.addEventListener('click', ()=>{
     let riskPerOperation = (accountBalance * risk.value) / 100
     let lossSize = riskPerOperation / stopLossPoint.value
 
-    lotResult.innerText = `${riskPerOperation},00`
-    stopResult.innerText = `${lossSize.toFixed(2)}`
-   
+    lotResult.innerText = `${lossSize.toFixed(2)}`
+    stopResult.innerText = `$${riskPerOperation},00`
 })

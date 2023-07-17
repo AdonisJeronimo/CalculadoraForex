@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
 .left-sidebar {
@@ -82,17 +83,93 @@ body {
   display: flex;
   height: 100vh;
   align-items: stretch;
-  background-image: url(../images/logo.png);
   background-color: #000;
-  background-size: 40% auto;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .container {
-  left: 230px;
+  display: flex;
+  width: 100vw;
   position: relative;
-  width: calc(100% - 230px);
+  justify-content: center;
+  position: relative;
+}
+.container img {
+  opacity: 0.2;
+}
+
+.content {
+  margin: 2rem 0;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.content h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.content .item #risk option:not(:last-child) {
+  padding: 10px;
+}
+.content .item #balance, .content .item #risk, .content .item #stop-loss-point {
+  text-align: center;
+  height: 50px;
+  font-size: 1rem;
+  padding: 0.1rem;
+  width: 50%;
+  background-color: #93CC8A;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+.content .item #balance:hover, .content .item #risk:hover, .content .item #stop-loss-point:hover {
+  cursor: pointer;
+  border-radius: 10px;
+}
+.content #calculate {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #0A8F00;
+  font-weight: bold;
+  transition: 0.4s;
+  margin-bottom: 1.5rem;
+}
+.content #calculate:hover {
+  background-color: #0a6e03;
+  color: #fff;
+  cursor: pointer;
+}
+.content .result {
+  display: flex;
+  justify-content: space-between;
+}
+.content .result .stop-loss, .content .result .lot-size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 150px;
+  width: 40%;
+  padding: 0.75rem;
+  background-color: #47CC3D;
+  border-radius: 15px;
+}
+.content .result .stop-loss span, .content .result .lot-size span {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,8 +8,11 @@
     <title>Document</title>
     <!-- FAVICON -->
     <!-- SWIPER CSS -->
-    <!-- FONT AWESOME -->
+
     <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link
       rel="stylesheet"
@@ -25,6 +28,7 @@
 
     <!-- MAIN -->
     <main class="main">
+
 
       <div class="left-sidebar" id="sidebar">
         
@@ -51,16 +55,20 @@
        </div>
       </div>
 
-
-
-
       <section class="container">
+
+      <img src="./src/images/logo.png" alt="">
+
+       <div class="content">
         <h1>Calculadora forex</h1>
 
-        <span>Valor em conta</span>
-        <input type="text" placeholder="Ex: $20000" id="balance" />
+        <div class="item">
+          <span>Valor em conta</span>
+          <input type="text" placeholder="Ex: $20000" class="money2" id="balance" />
+        </div>
 
-        <span>Risco diário</span>
+        <div class="item">
+          <span>Risco diário</span>
         <select id="risk">
           <option value="0.5">0,5%</option>
           <option value="1">1%</option>
@@ -73,20 +81,34 @@
           <option value="4.5">4,5%</option>
           <option value="5">5%</option>
         </select>
-
-        <span>Pontuação de Stop-loss</span>
-        <input type="text" placeholder="300pt" id="stop-loss-point" />
-
+        </div>
+        <div class="item"><span>Pontuação de Stop-loss</span>
+          <input type="text" placeholder="300pt" id="stop-loss-point" />
+        </div>
+        
         <input type="submit" value="Calcular" id="calculate" />
 
-        <div id="stop-loss-result"></div>
-        <div id="lot-size-result"></div>
+        <div class="result">
+          <div class="stop-loss">
+            <span>Stop Loss financeiro</span>
+            <h3 id="stop-loss-result"></h3>
+          </div>
+          <div class="lot-size">
+            <span>Lote</span>
+            <h3 id="lot-size-result"></h3>
+          </div>
+        </div>
       </section>
 
       <div class="overlay hidden"  id="overlay"></div>
+       </div>
     </main>
     <!-- FOOTER -->
 
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+        <!-- SCRIPT -->
     <script src="src/js/script.js"></script>
   </body>
 </html>
